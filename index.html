@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <title>Bluebird Botanicials</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link href="https://bootswatch.com/4/litera/bootstrap.min.css" rel="stylesheet">
-    <script src="main.js"></script>
-  </head>
-  <header class="header">
-    <a href="/">
-      <h1>string cleaner</h1>
-    </a>
-    <h2>remove special characters from strings</h2>
-    <h3>with the option to keep spaces, dashes, and underscores</h3>
-  </header>
+<head>
+  <meta charset="utf-8">
+  <title>Bluebird Botanicials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <link href="https://bootswatch.com/4/litera/bootstrap.min.css" rel="stylesheet">
+  <script src="main.js"></script>
+</head>
+<header class="header">
+  <a href="/">
+    <h1>string cleaner</h1>
+  </a>
+  <h2>remove special characters from strings</h2>
+  <h3>with the option to keep spaces, dashes, and underscores</h3>
+</header>
 
-  <body>
-    <div class="instructions">
-      <h2>instructions</h2>
+<body>
+  <div class="instructions">
+    <h2>instructions</h2>
+      <ul>
+        <li>Create a function that takes a string, removes all "special" characters (e.g. ! @ # $ % ^ & \ *) and returns
+          the new string.
+          The only non-alphanumeric characters allowed are dashes -, underscores _ and spaces.</li>
+      </ul>
+      <ul>
+        <li>Use the 3 tests below. Write the function in whatever language most comfortable. Bonus points for PHP. It
+          shouldn't take longer than 25 minutes. Data is unformatted to mimic raw api data and translating issues into
+          workable projects.
+        </li>
+      </ul>
+      <ul>
+        <li>It's simple code but not seeing the strings in the way you're expecting to and seeing a lot of special
+          characters that you know you will have to remove will cause issues for those that are way too junior for our
+          role.
+        </li>
+      </ul>
+  </div>
 
-              <p>
-                <ul>
-                  <li>Create a function that takes a string, removes all "special" characters (e.g. ! @ # $ % ^ & \ *) and returns the new string.
-                  The only non-alphanumeric characters allowed are dashes -, underscores _ and spaces.</li>
-              </ul>
-
-              <ul>
-                <li>Use the 3 tests below. Write the function in whatever language most comfortable. Bonus points for PHP. It shouldn't take longer than 25 minutes. Data is unformatted to mimic raw api data and translating issues into workable projects.
-              </li>
-            </ul>
-
-            <ul>
-              <li>It's simple code but not seeing the strings in the way you're expecting to and seeing a lot of special characters that you know you will have to remove will cause issues for those that are way too junior for our role.
-              </li>
-            </ul>
-    </div>
-
-    <div class="converter">
-      <div class="row justify-content-center">
-        <div class="col-sm-6">
-          <div class="card text-center mt-5 shadow">
-            <div class="card-body">
-              <h4 class="title">Enter Your String Here</h4>
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="keepSpecial">
-                <label class="form-check-label" for="defaultCheck1">
-                  keep underscores dashes and spaces?
-                </label>
-              </div>
-              <textarea class="form-control" id="inputTextArea" placeholder="Enter your string to convert here" rows="5" required="required" autofocus="autofocus"></textarea>
-              <div class="invalid-feedback">
-                Please enter a string in the text area.
-              </div>
-              <button type="submit" class="btn btn-primary my-3" onclick="convertData()">Convert me!</button>
-              <textarea class="form-control" id="outputTextArea" hidden="hidden" rows="5"></textarea>
-
+  <div class="converter">
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="card text-center mt-5 shadow">
+          <div class="card-body">
+            <h4 class="title">Enter Your String Here</h4>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="keepSpecial">
+              <label class="form-check-label" for="defaultCheck1">
+                keep underscores dashes and spaces?
+              </label>
             </div>
+            <textarea class="form-control" id="inputTextArea" placeholder="Enter your string to convert here" rows="5"
+              required="required" autofocus="autofocus"></textarea>
+            <div class="invalid-feedback">
+              Please enter a string in the text area.
+            </div>
+            <button type="submit" class="btn btn-primary my-3" onclick="convertData()">Convert me!</button>
+            <textarea class="form-control" id="outputTextArea" hidden="hidden" rows="5"></textarea>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
 
   <div class="tests">
     <div class="row justify-content-center">
@@ -72,62 +72,51 @@
         <div class="card text-left mt-5 shadow">
           <div class="card-body">
             <h2>Tests</h2></br>
-          
-            <ul>  
+            <ul>
               <b>Input 1:</b>
               S!c@i#e$n^c&e w\i\th!out $religio$n i!s la\me,_rel\i\g\ion-with*out science is$ bli^nd</br>
-
-              <b>Output 1:</b> 
+              <b>Output 1:</b>
               Science without religion is lame_religion-without science is blind</br>
             </ul>
-         
-             <ul>  
+            <ul>
               <b>Input 2:</b>
               3.1#4@1$$5$9!2@6#5^3&5*&89&^^7$93238462#643383279502884%197169399375105820974^94&45$9230^78164062%8620$8%9986^28034^825342^11!70$6!79</br>
-
-              <b>Output 2:</b> 
+              <b>Output 2:</b>
               31415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679</br>
-              
             </ul>
-
-             <ul>  
+            <ul>
               <b>Input 3:</b>
               #G@#$@$%@!^&*#O$%@B\*L#$%UE@#$B!I!R!#!D!@#@!@#@!#!@!@#!#!#!#!#!##>
-             </br>
-
-              <b>Output 3:</b> 
+              </br>
+              <b>Output 3:</b>
               GOBLUEBIRD
-            </br>
-              
+              </br>
             </ul>
-
           </div>
         </div>
       </div>
     </div>
   </div>
-</p>
-
 </body>
 
 <footer class="footer">
-<div class="wrap">
-  <div class="row middle-xs">
-    <div class="col-sm-6 made-with-love">
-      <h3>Made with
-      <span role="img" aria-label="Heart">❤️ by</span></br>
-      <a href="https://davidbrookton.com">David Brookton</a>
-    </h3>
+  <div class="wrap">
+    <div class="row middle-xs">
+      <div class="col-sm-6 made-with-love">
+        <h3>Made with
+          <span role="img" aria-label="Heart">❤️ by</span></br>
+          <a href="https://davidbrookton.com">David Brookton</a>
+        </h3>
+      </div>
+      <div class="col-sm-6 footer-nav">
+        <nav>
+          <a href="https://github.com/brookton/string-converter">GitHub</a>
+          <a href="https://codepen.io/davidbrookton/pen/YzzzdmB">CodePen</a>
+          <a href="https://davidbrookton.com">Author</a>
+        </nav>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-6 footer-nav">
-    <nav>
-      <a href="https://github.com/brookton/string-converter">GitHub</a>
-      <a href="https://codepen.io/davidbrookton/pen/YzzzdmB">CodePen</a>
-      <a href="https://davidbrookton.com">Author</a>
-    </nav>
-  </div>
-</div>
-</div>
 </footer>
 
 </html>
