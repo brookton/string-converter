@@ -1,0 +1,29 @@
+{
+  "name": "string-cleaner",
+  "version": "1.0.0",
+  "description": "A simple string cleaner using regex",
+  "main": "index.html",
+  "dependencies": {
+    "light-server": "^2.6.4"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brookton/string-converter.git"
+  },
+  "keywords": [
+    "regex"
+  ],
+  "author": "David Brookton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brookton/string-converter/issues"
+  },
+  "homepage": "https://github.com/brookton/string-converter#readme"
+}
